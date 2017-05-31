@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>joomla@corywebbmedia.com</authorEmail>
 	<authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<description>PLG_CW_SOMETA_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="cw_someta">cw_someta.php</filename>
