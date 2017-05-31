@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_cw_someta</name>
+	<author>Cory Webb</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>Copyright (C) 2016 Cory Webb Media, LLC. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joomla@corywebbmedia.com</authorEmail>
+	<authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
+	<version>1.0.5</version>
+	<description>PLG_CW_SOMETA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="cw_someta">cw_someta.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_cw_someta.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_cw_someta.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="default_image" type="media"
+                    label="PLG_CW_SOMETA_DEFAULTIMAGE_LABEL"
+                    description="PLG_CW_SOMETA_DEFAULTIMAGE_DESCRIPTION" />
+				<field name="twitter_site" type="text"
+					description="PLG_CW_SOMETA_TWITTER_SITE_DESCRIPTION"
+					label="PLG_CW_SOMETA_TWITTER_SITE_LABEL"
+				/>
+				<field name="twitter_creator" type="text"
+					description="PLG_CW_SOMETA_TWITTER_CREATOR_DESCRIPTION"
+					label="PLG_CW_SOMETA_TWITTER_CREATOR_LABEL"
+				/>
+				<field name="fb_app_id" type="text"
+					description="PLG_CW_SOMETA_FB_APP_ID_DESCRIPTION"
+					label="PLG_CW_SOMETA_FB_APP_ID_LABEL"
+				/>
+				<field name="fb_admins" type="text"
+					description="PLG_CW_SOMETA_FB_ADMINS_DESCRIPTION"
+					label="PLG_CW_SOMETA_FB_ADMINS_LABEL"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+        <server type="extension" name="CW So Meta Plugin Updates"><![CDATA[https://corywebbmedia.com/cw-so-meta-plugin-update-stream/?view=update&dummy=extension.xml]]></server>
+    </updateservers>
+</extension>
