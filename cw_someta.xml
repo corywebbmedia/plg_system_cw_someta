@@ -11,6 +11,8 @@
 	<description>PLG_CW_SOMETA_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="cw_someta">cw_someta.php</filename>
+		<filename>readme.md</filename>
+		<folder>tmpl</folder>
 	</files>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.plg_system_cw_someta.ini</language>
