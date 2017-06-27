@@ -6,8 +6,8 @@
 	<copyright>Copyright (C) 2016 Cory Webb Media, LLC. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>joomla@corywebbmedia.com</authorEmail>
-	<authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
-	<version>1.0.6</version>
+	<authorUrl>https://cwextensions.com</authorUrl>
+	<version>1.0.7</version>
 	<description>PLG_CW_SOMETA_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="cw_someta">cw_someta.php</filename>
@@ -45,6 +45,6 @@
 	</config>
 
 	<updateservers>
-        <server type="extension" name="CW So Meta Plugin Updates"><![CDATA[https://corywebbmedia.com/cw-so-meta-plugin-update-stream/?view=update&dummy=extension.xml]]></server>
+        <server type="extension" name="CW So Meta Plugin Updates"><![CDATA[https://cwextensions.com/cw-so-meta-plugin-update-stream/?view=update&dummy=extension.xml]]></server>
     </updateservers>
 </extension>
