@@ -94,7 +94,20 @@ class PlgSystemCw_someta extends JPlugin
 					$page_info = $this->getTagsInfo($menu_item);
 					break;
 			}
-		} else {
+		}
+		elseif ($option == 'com_j2store')
+		{
+			switch ($view) {
+				case 'products':
+					$page_info = $this->getProductInfo($id);
+					break;
+				
+				default:
+					$page_info = $this->getMenuItemInfo($menu_item);
+					break;
+			}
+		}
+		else {
 			$page_info = $this->getMenuItemInfo($menu_item);
 		}
 
@@ -243,6 +256,34 @@ class PlgSystemCw_someta extends JPlugin
 		}
 
 		return $tags_info;
+	}
+
+	/**
+	 * J2 Store Integration
+	 */
+	private function getProductInfo($product_id) {
+		
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+		
+		$query->select('product_source_id')
+			  ->from('#__j2store_products')
+			  ->where('j2store_product_id = ' . $product_id)
+			  ->where('product_source = ' . $db->quote('com_content'));
+			  
+		$db->setQuery($query);
+		
+		$article_id = $db->loadResult();
+		
+		if ($article_id) {
+			return $this->getArticleInfo($article_id);
+		}
+		
+		// Temporary for testing		
+		$app = JFactory::getApplication();
+		$menu_item = $app->getMenu()->getActive();
+		return $this->getMenuItemInfo($menu_item);
+		
 	}
 
 	private function getMenuItemInfo($menu_item)
