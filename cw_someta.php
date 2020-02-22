@@ -174,7 +174,10 @@ class PlgSystemCw_someta extends JPlugin
 		$params = json_decode($category->params);
 
 		if($params->image) {
-			$category_info['image'] = JURI::base() . $params->image;
+			// Got error 'PHP message: PHP Notice:  
+			// Trying to get property 'image' of non-object in plugins/system/cw_someta/cw_someta.php
+			// $category_info['image'] = JURI::base() . $params->image;
+			$category_info['image'] = JURI::base() . $params["image"];
 		}
 
 		return $category_info;
