@@ -173,12 +173,11 @@ class PlgSystemCw_someta extends JPlugin
 		$category_info['description'] = strip_tags($category->description);
 		$params = json_decode($category->params);
 
-		if($params->image) {
+		if(! empty($params->image)) {
 			$category_info['image'] = JURI::base() . $params->image;
 		}
 
 		return $category_info;
-
 
 	}
 
